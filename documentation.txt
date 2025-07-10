@@ -1,0 +1,62 @@
+client( in most cases with apps usually the server) interacts with the application through api to cosume a service it provides(abstracts complexity).
+api comm based on most commonly http req/res:
+4 components of req:
+url: unique location of resource on web 
+method: post send data, get recv data, delete, patch
+header: location language(json java etc) device  type used 
+body: (optional) only exists for post method
+credentials tested in either query parameters end of url or in the body
+3 componenets of http response:
+status codes 200 ok etc
+header: content legth,type, expiration date
+body: actual data being returned
+
+webhooks(reverse apis):
+used when the server needs to perform action at the end of waiting for an event
+alt is polling( send api req every interval of time)
+
+Building multi agent workflows:
+Types of workflow nodes:
+trigger nodes: recv email, database change , form submit , url req etc.
+processing nodes: work with and on data sort, filter,summarise etc 
+action nodes: have effect on external system e.g saving files,make api calls, send email etc
+using any combination of any three of tese nodes you can automate any scenario.
+both processing and action nodes have input/output.
+AI agents require the following:
+an input (trigger)
+chat model(LLM model) serving as its brain.
+memory can be window buffer or a large db
+tools e.g excel,calculate,power point etc or have access to real time data through web searches(serpapi).
+workfolws can serve as triggers for other workflows.
+
+1. Standalone Prompt
+A standalone prompt is a single-shot or few-shot instruction given to the model without memory or planning. It’s like asking a question and getting a direct answer.
+
+✅ Characteristics:
+No persistent memory or state.
+
+Executes only the immediate task.
+
+Does not use external tools unless embedded in the prompt.
+
+No context beyond what you provide in the prompt.
+
+📌 Example:
+“Write a poem about the moon in the style of Shakespeare.”
+
+The model just completes this task immediately, without planning, self-reflection, or tool use.
+
+🔹 2. Agent-Based Prompt
+An agent-based prompt is designed to initiate behavior from an AI agent, which may:
+
+Maintain memory/state.
+
+Use external tools (e.g., calculators, code execution, web).
+
+Plan multi-step reasoning.
+
+Reflect, revise, and act autonomously.
+
+It treats the model more like a software agent with abilities and responsibilities.
+
+

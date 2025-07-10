@@ -43,3 +43,10 @@ Daily log:
 - Created a Webhook node with the POST method and tested it with JSON input.
 - Verified successful data reception in n8n's execution panel.
 - Ready to process and summarize the data using LLMs in the next step.
+
+### 🗓️ Day 2: LLM Agents & AI Flows in n8n
+Explored LLM Chain node in n8n for integrating AI summarization into workflows.
+Configured a webhook trigger and tested blog content input via Postman.
+Crafted an optimized prompt to extract concise blog summaries in bullet format.
+Verified LLM output and ensured the input content was correctly parsed and summarized.
+Successfully built a working blog summarizer agent with AI + automation in n8n.
