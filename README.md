@@ -36,15 +36,16 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) 
 for more details.
 
-Daily log:
-### 🗓️ Day 1: n8n Webhooks Integration
+### Daily log:
+
+## 🗓️ Day 1: n8n Webhooks Integration
 - Successfully set up and activated a dedicated n8n cloud instance.
 - Understood the role of webhooks and how they enable external services to push data into workflows.
 - Created a Webhook node with the POST method and tested it with JSON input.
 - Verified successful data reception in n8n's execution panel.
 - Ready to process and summarize the data using LLMs in the next step.
 
-### 🗓️ Day 2: LLM Agents & AI Flows in n8n
+## 🗓️ Day 2: LLM Agents & AI Flows in n8n
 Explored LLM Chain node in n8n for integrating AI summarization into workflows.
 Configured a webhook trigger and tested blog content input via Postman.
 Crafted an optimized prompt to extract concise blog summaries in bullet format.
