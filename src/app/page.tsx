@@ -35,11 +35,11 @@ export default function BlogSummarizer() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             rows={6}
-            placeholder="Paste blog text or enter blog URL..."
+            placeholder="Paste blog text or enter a public blog URL"
             className="bg-neutral-900 border border-neutral-700 text-white"
           />
           <Button type="submit" className="w-full bg-violet-700 hover:bg-violet-500 cursor-pointer">
-            Summarize Now — It’s Free
+            Summarize Now
           </Button>
         </form>
 
