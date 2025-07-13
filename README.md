@@ -52,13 +52,13 @@ Crafted an optimized prompt to extract concise blog summaries in bullet format.
 Verified LLM output and ensured the input content was correctly parsed and summarized.
 Successfully built a working blog summarizer agent with AI + automation in n8n.
 
-## Day 9: LLM Chains & AI Agents in n8n
+## Day 3: LLM Chains & AI Agents in n8n
 Configured the LLM Request node using Together AI with the Mixtral-8x7B-Instruct model for generating blog summaries.
 Designed a clear summarization prompt using {{ $json.body.input }} and ensured correct JSON body formatting.
 Linked the LLM output to a Set node and finalized response handling using the Respond to Webhook node.
 Confirmed smooth end-to-end flow of blog content → LLM summary → frontend via API.
 
-## Day 10: PostgreSQL Integration with Prisma + Live Webhook Automation
+## Day 4: PostgreSQL Integration with Prisma + Live Webhook Automation
 Understood the purpose of PostgreSQL for structured summary logging.
 Installed and configured PostgreSQL 17 and connected it via pgAdmin.
 Ran npx prisma init to generate Prisma schema and client.
@@ -69,7 +69,7 @@ Accepts user blog input
 Forwards it to n8n
 Logs the input and response summary to the PostgreSQL database
 
-## Day 11: MongoDB + Mongoose CRUD:
+## Day 5: MongoDB + Mongoose CRUD:
 Schema definition with Mongoose
 Creating, reading, updating, and deleting 
 Express routing and controller separation
