@@ -59,4 +59,14 @@ Reflect, revise, and act autonomously.
 
 It treats the model more like a software agent with abilities and responsibilities.
 
+Prisma:
+first install using npm install prisma --save-device
+npx prisma init
+update db url with password and write your table name instaed of summarizer
+make schema in prisma/schema.prisma
+npx db push
+npm install @prisma/client
+npx prisma generate
+import prisma client from @generate/prisma
 
+Deploy to vercel with github connection:

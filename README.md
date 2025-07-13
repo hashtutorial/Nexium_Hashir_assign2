@@ -68,3 +68,9 @@ Created a submit API route that:
 Accepts user blog input
 Forwards it to n8n
 Logs the input and response summary to the PostgreSQL database
+
+## Day 11: MongoDB + Mongoose CRUD:
+Schema definition with Mongoose
+Creating, reading, updating, and deleting 
+Express routing and controller separation
+API testing using Postman and frontend integration
