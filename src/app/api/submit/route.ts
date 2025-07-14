@@ -127,7 +127,7 @@ export async function POST(req: Request) {
   ]);
 
   //Save full blog text in MongoDB
-  await connectToMongo();
+  await connectToDatabase();
   await BlogText.create({
     input,
     content: scrapedText,
