@@ -36,41 +36,52 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) 
 for more details.
 
-### Daily log:
+### Daily log: Blog Summarizer — Assignment 2
 
-##  Day 1: n8n Webhooks Integration
-- Successfully set up and activated a dedicated n8n cloud instance.
-- Understood the role of webhooks and how they enable external services to push data into workflows.
-- Created a Webhook node with the POST method and tested it with JSON input.
-- Verified successful data reception in n8n's execution panel.
-- Ready to process and summarize the data using LLMs in the next step.
+### Day 1: Project Setup
 
-##  Day 2: LLM Agents & AI Flows in n8n
-Explored LLM Chain node in n8n for integrating AI summarization into workflows.
-Configured a webhook trigger and tested blog content input via Postman.
-Crafted an optimized prompt to extract concise blog summaries in bullet format.
-Verified LLM output and ensured the input content was correctly parsed and summarized.
-Successfully built a working blog summarizer agent with AI + automation in n8n.
+Set up project folder `assignment-2/` using Next.js and TypeScript.
 
-## Day 3: LLM Chains & AI Agents in n8n
-Configured the LLM Request node using Together AI with the Mixtral-8x7B-Instruct model for generating blog summaries.
-Designed a clear summarization prompt using {{ $json.body.input }} and ensured correct JSON body formatting.
-Linked the LLM output to a Set node and finalized response handling using the Respond to Webhook node.
-Confirmed smooth end-to-end flow of blog content → LLM summary → frontend via API.
+### Day 2: Static AI Summary & Urdu Translation
 
-## Day 4: PostgreSQL Integration with Prisma + Live Webhook Automation
-Understood the purpose of PostgreSQL for structured summary logging.
-Installed and configured PostgreSQL 17 and connected it via pgAdmin.
-Ran npx prisma init to generate Prisma schema and client.
-Designed a Prisma model to log blog input, summaries, and user IP addresses.
-Connected Prisma to the database and tested local writes successfully.
-Created a submit API route that:
-Accepts user blog input
-Forwards it to n8n
-Logs the input and response summary to the PostgreSQL database
+* Wrote static logic in `routes.ts` to simulate AI summarization (first 10 words).
+* Built a custom English-to-Urdu dictionary using JavaScript `Record<string, string>`.
+* Implemented the `translateToUrdu()` function to convert simulated summary.
+* Verified the Urdu summary output via frontend POST requests.
+* Confirmed fallback handling for unknown words during translation.
 
-## Day 5: MongoDB + Mongoose CRUD:
-Schema definition with Mongoose
-Creating, reading, updating, and deleting 
-Express routing and controller separation
-API testing using Postman and frontend integration
+---
+
+### Day 3: MongoDB (Unstructured Data) Integration
+
+* Created a `BlogText` Mongoose model for full blog content storage.
+* Connected to MongoDB Atlas via URI and `.env` config.
+* Stored full scraped blog text along with user input and IP address.
+* Verified document creation via MongoDB Atlas dashboard.
+
+---
+
+### Day 4: Supabase (Structured Summary Storage)
+
+* Initialized Supabase project and generated `SUPABASE_URL` and `ANON_KEY`.
+* Created a `summaries` table with fields: input, summary, ip\_address, created\_at.
+* Connected Supabase to the Next.js app using `@supabase/supabase-js`.
+* Successfully inserted Urdu summaries to Supabase on blog submission.
+
+---
+
+### Day 5: Frontend with ShadCN UI
+
+* Built a responsive blog submission UI using `Input`, `Button`, `Card`, and `Textarea` from ShadCN.
+* Styled the layout using Tailwind with theme toggle (`dark`/`light` mode).
+* Implemented error validation, button loading spinner, and success output.
+* Used Lucide icons (`Sun`, `Moon`, `Loader2`) for theme toggle and UX polish.
+
+---
+
+### Day 6: Deployment & Final Testing
+
+* Tested blog URLs from [freeCodeCamp](https://www.freecodecamp.org/news/) and confirmed summaries were accurate and translated.
+* Verified Supabase and MongoDB received logs properly with IP + input + content.
+* Deployed the project to Vercel from `assignment-2/` directory with live environment variables.
+* Finalized a clean UI/UX with theme toggle, animation, and real-time feedback.
