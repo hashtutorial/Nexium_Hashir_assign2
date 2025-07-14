@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Blog Summarizer',
-  description: 'Summarize articles using AI and n8n automation',
+  description: 'Summarize Blogs',
 };
 
 export default function RootLayout({
