@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase';
-import { connectToMongo } from '@/lib/mongo';
+import { connectToDatabase } from '@/lib/mongo';
 import BlogText from '@/models/BlogText';
 
 import * as cheerio from 'cheerio';
