@@ -87,15 +87,24 @@ export default function BlogSummarizer() {
             {error && (
               <p className="text-sm text-red-500 dark:text-red-400 text-left px-1">{error}</p>
             )}
+<Button
+  type="submit"
+  disabled={loading || !isURL}
+  className={`w-full 
+    bg-gradient-to-r from-cyan-400 via-blue-500 to-lime-400 
+    hover:from-cyan-300 hover:via-blue-400 hover:to-lime-300 
+    text-black font-semibold 
+    disabled:opacity-60 
+    cursor-pointer 
+    flex items-center justify-center gap-2 
+    transition-all duration-300 
+    shadow-md hover:shadow-xl 
+    shadow-cyan-500/30 hover:shadow-lime-400/50`}
+>
+  {loading && <Loader2 className="h-4 w-4 animate-spin" />}
+  {loading ? 'Summarizing...' : 'Summarize'}
+</Button>
 
-            <Button
-              type="submit"
-              disabled={loading || !isURL}
-              className="w-full bg-violet-700 hover:bg-violet-500 disabled:opacity-60 cursor-pointer flex items-center justify-center gap-2"
-            >
-              {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-              {loading ? 'Summarizing...' : 'Summarize'}
-            </Button>
           </form>
 
           {/* Summary Output */}
