@@ -64,9 +64,9 @@ export default function BlogSummarizer() {
 
         {/* Content */}
         <div className="max-w-2xl w-full text-center space-y-8 z-10">
-          <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-violet-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-text-glow">
-            Summariser
-          </h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-lime-400 bg-clip-text text-transparent animate-text-glow">
+  Snap<span className="text-cyan-400">Summary</span>
+</h1>
           <p className="text-base md:text-lg">
             Paste any blog URL to instantly receive a short Urdu summary.
           </p>
