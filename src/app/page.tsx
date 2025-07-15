@@ -111,7 +111,7 @@ export default function BlogSummarizer() {
           {summary && (
             <Card className="bg-neutral-100 dark:bg-neutral-900 text-left border border-neutral-300 dark:border-neutral-700 shadow-lg">
               <CardContent className="p-6 space-y-2">
-                <h2 className="text-violet-400 text-xl font-bold">خلاصہ:</h2>
+                <h2 className="text-cyan-400 text-xl font-bold">خلاصہ:</h2>
                 <p className="whitespace-pre-line leading-relaxed" lang="ur">{summary}</p>
               </CardContent>
             </Card>
