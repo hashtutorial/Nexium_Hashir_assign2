@@ -64,7 +64,7 @@ export default function BlogSummarizer() {
 
         {/* Content */}
         <div className="max-w-2xl w-full text-center space-y-8 z-10">
-        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight md:leading-[1.2] bg-gradient-to-r from-cyan-400 via-blue-500 to-lime-400 bg-clip-text text-transparent animate-text-glow">
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight md:leading-[1.4] bg-gradient-to-r from-cyan-400 via-blue-500 to-lime-400 bg-clip-text text-transparent animate-text-glow">
   Blog<span className="text-cyan-400">xtract</span>
 </h1>
           <p className="text-base md:text-lg">
