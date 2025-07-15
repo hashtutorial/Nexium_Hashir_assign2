@@ -106,16 +106,7 @@ export default function BlogSummarizer() {
 </Button>
           </form>
 
-          {/* Summary Output */}
-
-      {summary && (
-  <Card className="bg-neutral-100 dark:bg-neutral-900 text-left border border-neutral-300 dark:border-neutral-700 shadow-lg">
-    <CardContent className="p-6 space-y-2">
-      <h2 className="text-cyan-400 text-xl font-bold">Summary:</h2>
-      <p className="whitespace-pre-line leading-relaxed">{summary}</p>
-    </CardContent>
-  </Card>
-)}          
+          {/* Summary Output */}  
           {summary && (
             <Card className="bg-neutral-100 dark:bg-neutral-900 text-left border border-neutral-300 dark:border-neutral-700 shadow-lg">
               <CardContent className="p-6 space-y-2">
